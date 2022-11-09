@@ -1,0 +1,24 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: orderservice
+  datasource:
+    url: jdbc:mysql://localhost:3306/test02?useSSL=false
+#    url: jdbc:mysql://192.168.85.10:3306/test02?useSSL=false
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis-plus:
+  type-aliases-package: com.hmall.order.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+  global-config:
+    db-config:
+      update-strategy: not_null
+      id-type: auto
+logging:
+  level:
+    com.hmall: debug
+  pattern:
+    dateformat: HH:mm:ss:SSS
